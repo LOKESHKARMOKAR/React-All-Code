@@ -68,11 +68,44 @@ export default App */}
 
 
 import './App.css'
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Header from './component/header';
 
 function App() {
-const [count, setCount] = useState(0);
 
+  
+
+
+
+// Useref
+
+{/*const count = useRef(0);
+
+useEffect(()=>{
+  count.current = count.current+1; 
+})
+
+
+const increseCount =()=>{
+   setValue((prev)=>{return  prev-1 })
+}
+
+const decreseCount = ()=>{
+   setValue((prev)=>{return prev+1})
+}*/}
+
+
+
+
+  // useEffect Hooks
+
+{/*useEffect(()=>{
+setTimeout(()=>{
+  setCount(count+1)
+},2000)
+},[count])*/}
+
+  // UseState hooks
 
 { /*const increseCounter = ()=>{
   setCount((prev)=>{
@@ -89,10 +122,41 @@ const [count, setCount] = useState(0);
     </>
   )*/ }
 
-return(
+  // UseEffect
+
+{/*return(
   <h1>I have render {count} times</h1>
+)
+*/}
+
+    // useRef
+
+{/*return(
+  <>
+  <button onClick={decreseCount}>+1</button>
+  <h1>{value}</h1>
+  <button onClick={increseCount}>-1</button>
+
+  <h1>Render Count : {count.current}</h1>
+  </>
+)*/}
+
+const [count, setCount] = useState(0);
+const newFu = useCallback((count)=>{
+console.log("New Function");
+
+},[count])
+
+return (
+  <>
+  <Header newFunction = {newFu}/>
+<h1>{count}</h1>
+<button onClick={()=>setCount(prev =>(prev+1))}>Click Here</button>
+  
+  </>
 )
 
 }
 
-export default App 
+
+export default App
