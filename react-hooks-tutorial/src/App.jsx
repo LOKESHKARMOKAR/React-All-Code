@@ -71,21 +71,28 @@ import './App.css'
 import { useState } from 'react';
 
 function App() {
-const [count,setCount] = useState(0);
+const [count, setCount] = useState(0);
 
-const increseCounter = ()=>{
+
+{ /*const increseCounter = ()=>{
   setCount((prev)=>{
     return prev +1
   });
 }
 
+}
   return (
     
     <>
       <h1>count : {count}</h1>
       <button onClick={increseCounter}>Click</button>
     </>
-  )
+  )*/ }
+
+return(
+  <h1>I have render {count} times</h1>
+)
+
 }
 
 export default App 
