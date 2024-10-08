@@ -156,15 +156,16 @@ setTimeout(()=>{
 
 
 
-import './App.css'
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Header from './component/header';
+import {Footer} from "./components/footer"
+import {Profile} from "./components/profile"
+
 
 function App() {
 return (
-  <div>
-    
-  </div>
+  <>
+ <Profile />
+ <Footer />
+  </>
 )
 
 }
