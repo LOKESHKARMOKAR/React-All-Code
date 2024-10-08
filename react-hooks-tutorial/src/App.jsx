@@ -67,15 +67,11 @@ export default App */}
 //         React Hoocks Example - 3
 
 
-import './App.css'
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Header from './component/header';
+// import './App.css'
+// import { useCallback, useEffect, useRef, useState } from 'react';
+// import Header from './component/header';
 
-function App() {
-
-  
-
-
+// function App() {
 
 // Useref
 
@@ -141,22 +137,36 @@ setTimeout(()=>{
   </>
 )*/}
 
-const [count, setCount] = useState(0);
-const newFu = useCallback((count)=>{
-console.log("New Function");
+// const [count, setCount] = useState(0);
+// const newFu = useCallback((count)=>{
+// console.log("New Function");
 
-},[count])
+// },[count])
 
-return (
+// return (
   <>
-  <Header newFunction = {newFu}/>
+  {/* <Header newFunction = {newFu}/>
 <h1>{count}</h1>
-<button onClick={()=>setCount(prev =>(prev+1))}>Click Here</button>
+<button onClick={()=>setCount(prev =>(prev+1))}>Click Here</button> */}
   
   </>
+// )
+
+// }
+
+
+
+import './App.css'
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Header from './component/header';
+
+function App() {
+return (
+  <div>
+    
+  </div>
 )
 
 }
-
 
 export default App
