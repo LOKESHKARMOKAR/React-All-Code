@@ -2,8 +2,8 @@ import { createContext } from "react";
 
 export const AppContext = createContext();
 
-const Footer = (props)=>{
-    const phone = '+91 9382291059'
+const ContextProvider = (props)=>{
+    const phone = "+91 9382291059"
     return (
         <AppContext.Provider value={phone}>
             {props.children}
@@ -11,4 +11,4 @@ const Footer = (props)=>{
     )
 }
 
-export default contextProvider;
+export default ContextProvider

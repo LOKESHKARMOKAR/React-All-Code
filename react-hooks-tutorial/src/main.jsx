@@ -1,13 +1,11 @@
 import { createRoot } from 'react-dom/client'
-import contextProvider from './context/appContext.jsx'
 import App from './App.jsx'
+import ContextProvider from './context/appContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-    <contextProvider>
-          <App />
-    </contextProvider>
-  
-  
-  
+   <ContextProvider>
+    <App />
+   </ContextProvider>
+          
 )
