@@ -1,6 +1,8 @@
 
 //         React Hoocks Example - 1
 
+
+
 {/*import './App.css'
 import { useState } from 'react';
 
@@ -156,13 +158,18 @@ setTimeout(()=>{
 
 
 
-
+import { useEffect, useState } from "react"
+import useLocalStorage from "./useLocalStorage"
 
 
 function App() {
+
+const [name, setName] = useLocalStorage('Username', '');
 return (
   <>
-
+  <input type="text" placeholder="Enter your name.." value={name} onChange={(e)=>setName(e.target.value)} />
+  <h2>Hello, {name}</h2>
+  
   </>
 )
 
