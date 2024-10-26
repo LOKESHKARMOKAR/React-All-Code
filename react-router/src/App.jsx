@@ -3,12 +3,18 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Movie from "./pages/movie";
+import AppLayout from "./components/layout/AppLayout";
+import { Children } from "react";
 
 function App() {
  
   // setup of pages routing path 
 const router = createBrowserRouter([
-  // home
+  {
+    path:"/",
+    element:<AppLayout />,
+    Children:[
+      // home
   {
     path:"/",
     element:<Home />,
@@ -28,6 +34,10 @@ const router = createBrowserRouter([
     path:"/movie",
     element:<Movie />,
   }
+  ]
+  },
+ 
+  
 ]);
   return (
     
